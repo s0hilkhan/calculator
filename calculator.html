@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body style="background-color: black;">
+    <div style="height:1200px;width:1250px;">
+        <div style="height:7%;width:1550px;background-color:rgb(197, 195, 64);">
+            <h2 style="margin-left:650px;padding-top: 30px;">CALCULATOR</h2> <br> <input
+                style="margin-left: 580px; border-radius: 5%; height: 50px;" type="number" placeholder="first number"
+                id="fno"> <input style="border-radius: 5%; height: 50px;" type="number" placeholder="second number"
+                id="sno">
+            <h4 style="margin-left: 690px; background-color: ivory; width: 80px; text-align: center;" id="add">result :
+            </h4> <button style="background: rgb(119, 29, 96); margin-left: 615px; height: 30px;" onclick="sum()">add</button>
+            <button style="background: rgb(216, 121, 13); height: 30px;" onclick="multiply()">mutiply</button> <button
+                style="background: rgb(67, 63, 83); height: 30px;" onclick="division()">division</button> <button
+                style="background: rgb(11, 151, 58); height: 30px;" onclick="subtraction()">subtraction</button>
+</body>
+<script>
+    function sum() {
+        var fno = document.getElementById('fno').value;
+        var sno = document.getElementById('sno').value;
+        document.getElementById('add').innerText = Number(fno) + Number(sno);
+    }
+    function multiply() {
+        var fno = document.getElementById('fno').value;
+        var sno = document.getElementById('sno').value;
+        document.getElementById('add').innerText = Number(fno) * Number(sno);
+    }
+    function division() {
+        var fno = document.getElementById('fno').value;
+        var sno = document.getElementById('sno').value;
+        if (Number(sno) == 0)
+            document.getElementById('add').innerText = "Division Not Possible";
+        else {
+            var fno = document.getElementById('fno').value;
+            document.getElementById('add').innerText = Number(fno) / Number(sno);
+        }
+    }
+    function subtraction() {
+        var fno = document.getElementById('fno').value;
+        var sno = document.getElementById('sno').value;
+        document.getElementById('add').innerText = Number(fno) - Number(sno);
+    }
+</script>
+
+</html>
